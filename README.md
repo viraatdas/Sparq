@@ -35,3 +35,10 @@ Dating apps where AI decides who you date
 5. **Go On a Date:**
    - If the Discriminator AI approves the match, users are notified and encouraged to set up an in-person date.
 
+
+
+----
+
+# Building AI
+## Ideas
+- Do a audio interview where AI interviews at setup
