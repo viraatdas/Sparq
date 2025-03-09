@@ -21,7 +21,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100" asChild>
-                <Link href="/auth/register">
+                <Link href="/auth/register?tab=register">
                   Create Your AI Dating Personality
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -98,7 +98,7 @@ export default function Home() {
             Let AI find your genuine connections by cutting through the games and revealing red flags early.
           </p>
           <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100" asChild>
-            <Link href="/auth/register">
+            <Link href="/auth/register?tab=register">
               Create Your AI Dating Personality
               <Brain className="ml-2 h-5 w-5" />
             </Link>

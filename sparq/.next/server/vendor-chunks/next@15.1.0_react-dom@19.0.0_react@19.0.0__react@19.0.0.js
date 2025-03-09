@@ -1820,19 +1820,6 @@ eval("/* eslint-disable import/no-extraneous-dependencies */ \nObject.defineProp
 
 /***/ }),
 
-/***/ "(rsc)/./node_modules/.pnpm/next@15.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/app-dir/link.js":
-/*!**********************************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/next@15.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/app-dir/link.js ***!
-  \**********************************************************************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-const { createProxy } = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/.pnpm/next@15.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js")
-
-module.exports = createProxy("/Users/viraat/Documents/projects/Sparq/sparq/node_modules/.pnpm/next@15.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/app-dir/link.js")
-
-
-/***/ }),
-
 /***/ "(rsc)/./node_modules/.pnpm/next@15.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/components/app-router-headers.js":
 /*!***************************************************************************************************************************************************!*\
   !*** ./node_modules/.pnpm/next@15.1.0_react-dom@19.0.0_react@19.0.0__react@19.0.0/node_modules/next/dist/client/components/app-router-headers.js ***!

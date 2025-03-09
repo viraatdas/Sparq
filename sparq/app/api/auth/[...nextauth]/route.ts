@@ -1,6 +1,6 @@
 import NextAuth, { AuthOptions } from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
-import InstagramProvider from "next-auth/providers/instagram"
+import GoogleProvider from "next-auth/providers/google"
 import { compare } from "bcryptjs"
 import { JWT } from "next-auth/jwt"
 import { Session } from "next-auth"
@@ -20,15 +20,15 @@ declare module "next-auth" {
 
 export const authOptions: AuthOptions = {
   providers: [
-    InstagramProvider({
-      clientId: process.env.INSTAGRAM_CLIENT_ID!,
-      clientSecret: process.env.INSTAGRAM_CLIENT_SECRET!,
-      profile(profile: any) {
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      profile(profile) {
         return {
-          id: profile.id,
-          name: profile.username || profile.name,
+          id: profile.sub,
+          name: profile.name,
           email: profile.email,
-          image: profile.profile_picture,
+          image: profile.picture,
         }
       },
     }),
@@ -71,7 +71,7 @@ export const authOptions: AuthOptions = {
   callbacks: {
     async signIn({ user, account }) {
       // If user signs in with OAuth, create or update user in Supabase
-      if (account?.provider === 'instagram' && user.email) {
+      if (account?.provider === 'google' && user.email) {
         const { data, error } = await supabase
           .from('users')
           .select('id')
@@ -118,4 +118,3 @@ export const authOptions: AuthOptions = {
 
 const handler = NextAuth(authOptions)
 export { handler as GET, handler as POST }
-
